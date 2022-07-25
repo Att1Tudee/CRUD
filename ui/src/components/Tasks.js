@@ -15,14 +15,14 @@ export const Tasks = ({tasks, deleteTask, taskEdited}) => {
                   <td>{task.assignee}</td>
                   <td>
                     <div className="row">
-                        <div className="col-md-6">
-                        {task.status}
+                        <div className="col-md-1">
+                        {/* THIS IS COMMENTED OUT DUE STATUS NOT NEEDED NOW {task.status}*/}
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-5">
                             <EditTaskModal task={task} taskEdited={taskEdited}/>
                         </div>
-                        <div className="col-md-3">
-                          <button type="button" onClick={(e) => deleteTask(task._id)} className="btn btn-success right">Delete</button>
+                        <div className="col-md-5">
+                          <button id="deletebutton" type="button" onClick={(e) => deleteTask(task._id)} className="btn btn-outline-danger right">Delete</button>
                         </div>
                     </div>
                   </td>
@@ -34,14 +34,14 @@ export const Tasks = ({tasks, deleteTask, taskEdited}) => {
 
     return(
         <div className="container">
-            <h2>Database</h2>
+            <h2 id="databasetitle">Database</h2>
             <table className="table table-bordered">
                 <thead>
                 <tr>
                     <th>MOTD Id</th>
                     <th>Author</th>
                     <th>MOTD</th>
-                    <th>Status</th>
+                    {/* THIS IS COMMENTED OUT DUE STATUS NOT NEEDED NOW <th>Status</th>*/}
                 </tr>
                 </thead>
                 <tbody>

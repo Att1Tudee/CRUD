@@ -16,7 +16,7 @@ export default function CreateTask(props) {
         <div className="container">
             <div className="row">
                 <div className="col-md-12 mrgnbtm">
-                <h2>Create Motd</h2>
+                <h2 class="font-effect-fire">Create Motd</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="row mrgnbtm">
                         <div className="form-group col-md-6">
@@ -28,6 +28,10 @@ export default function CreateTask(props) {
                             <input {...register("assignee")} placeholder="Message of the day" className="form-control" name="assignee" id="assignee" />
                         </div>
                     </div>
+                    {/* 
+                    
+THIS IS THE OPTIONAL STATUS
+
                     <div className="row mrgnbtm">
                         <div className="form-group col-md-12">
                             <label htmlFor="exampleInputEmail1">When to post:</label>
@@ -37,8 +41,13 @@ export default function CreateTask(props) {
                                 <option>Completed</option>
                             </select>
                         </div>
-                    </div>
-                    <input type="submit" value= "Save" className="btn btn-success mrgnbtm" />
+                     </div>
+
+
+
+                         */}
+
+                    <input id="savebutton" type="submit" value= "Save" className="btn btn-outline-success mrgnbtm" />
                 </form>
                 </div>
             </div>

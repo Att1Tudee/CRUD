@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: 900;
+  src: local('Bebas Neue'), url(./fonts/BebasNeue-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-weight: 900;
+  src: local('Shadows Into Light'), url(./fonts/ShadowsIntoLight-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Permanent Marker';
+  font-weight: 900;
+  src: local('Permanent Marker'), url(./fonts/PermanentMarker-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quantico';
+  font-weight: 900;
+  src: local('Quantico'), url(./fonts/Quantico-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fredericka the Great';
+  font-weight: 900;
+  src: local('Fredericka the Great'), url(./fonts/FrederickatheGreat-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin Sketch';
+  font-weight: 900;
+  src: local('Cabin Sketch'), url(./fonts/CabinSketch-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Wallpoet';
+  font-weight: 900;
+  src: local('Wallpoet'), url(./fonts/Wallpoet-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Shojumaru';
+  font-weight: 900;
+  src: local('Shojumaru'), url(./fonts/Shojumaru-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Frijole';
+  font-weight: 900;
+  src: local('Frijole'), url(./fonts/Frijole-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Averia Sans Libre';
+  font-weight: 900;
+  src: local('Averia Sans Libre'), url(./fonts/AveriaSansLibre-Regular.ttf) format('truetype');
+}
+

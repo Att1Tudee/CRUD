@@ -3,13 +3,21 @@ body {
 
 }
 
+/* MOTD BOT CONTROL TITLE */
+
 .header {
   width: 100%;
   padding: 2%;
   background-image: url("https://airwallpaper.com/wp-content/uploads/wall003/Abstract-Website-Backgrounds.jpg");
-  color: rgba(0, 255, 255, 0.89);
   text-align: center;
+  font-family: 'Fredericka the Great', 'Helvetica', sans-serif;
+  opacity: 100%;
+
 }
+#headertext {
+  color: rgba(0, 255, 255, 0.89);
+}
+/* END OF MOTD BOT TITLE */
 
 .mrgnbtm {
   margin-top: 20px;
@@ -23,13 +31,89 @@ body {
   margin-bottom: 10px;
 }
 
+/* Create MOTD and Database titles */
+
 h2 {
   color: rgba(0, 255, 255, 0.89);
+  font-family: 'Shojumaru', 'Helvetica', sans-serif;
+  opacity: 75%;
+
 
 }
 
-/* ID color */
-th, td, label {
+/* Labels aka Author and MOTD titles on saving area */
+label {
   color: rgba(0, 255, 255, 0.89);
+  font-family: 'Fredericka the Great', 'Helvetica', sans-serif;
+  opacity: 100%;
 
 }
+
+
+/* MOTD ID, AUTHOR and MOTD text in database box */
+th {
+  font-family: 'Shojumaru', 'Helvetica', sans-serif;
+  color: rgba(0, 255, 255, 0.89);
+  opacity: 85%;
+
+}
+
+/* Data inside database box fields*/
+td {
+  font-family: 'Averia Sans Libre', 'Helvetica', sans-serif;
+  color: rgba(0, 255, 255, 0.89);
+  opacity: 100%
+
+}
+
+#databasetitle{
+  font-family: 'Shojumaru', 'Helvetica', sans-serif;
+
+}
+
+/* Buttons*/
+
+#savebutton {
+  font-family: 'Frijole', 'Helvetica', sans-serif;
+  opacity: 80%;
+
+}
+
+#editbutton {
+  font-family: 'Frijole', 'Helvetica', sans-serif;
+  opacity: 80%;
+
+}
+
+#deletebutton {
+  font-family: 'Frijole', 'Helvetica', sans-serif;
+  opacity: 80%;
+
+}
+#sendbutton {
+  font-family: 'Frijole', 'Helvetica', sans-serif;
+  opacity: 80%;
+
+}
+
+/* edit window */
+div.modal-content {
+  background-image: url("https://airwallpaper.com/wp-content/uploads/wall003/Abstract-Website-Backgrounds.jpg");
+}
+div.modal-title.h4 {
+  font-family: 'Shojumaru', 'Helvetica', sans-serif;
+  color: rgba(0, 255, 255, 0.89);
+  opacity: 80%;
+
+}
+
+/* field backgrounds*/
+#task, #assignee, #status {
+  background-image: url("https://airwallpaper.com/wp-content/uploads/wall003/Abstract-Website-Backgrounds.jpg");
+  color: aliceblue;
+}
+
+#id {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
