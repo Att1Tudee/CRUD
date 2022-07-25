@@ -39,7 +39,7 @@ export default function EditTaskModal({task, taskEdited}) {
             </div>
             <div className="row">
                 <div className="form-group col-md-6">
-                    <label htmlFor="task">Task</label>
+                    <label htmlFor="task">Author</label>
                     <input {...register("task")} type="text" className="form-control" defaultValue={task.task} name="task" id="task" placeholder="Create a Task" />
                 </div>
             </div>
@@ -60,7 +60,7 @@ export default function EditTaskModal({task, taskEdited}) {
                 </div>
             </div>
             <div className="btncenter">
-              <input type="submit" className="btn btn-danger" />
+              <input type="submit" value ="Send" className="btn btn-success" />
             </div>
             </form>
           </Modal.Body>

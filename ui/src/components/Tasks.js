@@ -22,7 +22,7 @@ export const Tasks = ({tasks, deleteTask, taskEdited}) => {
                             <EditTaskModal task={task} taskEdited={taskEdited}/>
                         </div>
                         <div className="col-md-3">
-                          <button type="button" onClick={(e) => deleteTask(task._id)} className="btn btn-danger right">Delete</button>
+                          <button type="button" onClick={(e) => deleteTask(task._id)} className="btn btn-success right">Delete</button>
                         </div>
                     </div>
                   </td>
@@ -34,13 +34,13 @@ export const Tasks = ({tasks, deleteTask, taskEdited}) => {
 
     return(
         <div className="container">
-            <h2>Tasks</h2>
+            <h2>Database</h2>
             <table className="table table-bordered">
                 <thead>
                 <tr>
-                    <th>Task Id</th>
-                    <th>Task Name</th>
-                    <th>Assignee</th>
+                    <th>MOTD Id</th>
+                    <th>Author</th>
+                    <th>MOTD</th>
                     <th>Status</th>
                 </tr>
                 </thead>

@@ -1,8 +1,13 @@
+body {
+  background-image: url("https://airwallpaper.com/wp-content/uploads/wall003/Abstract-Website-Backgrounds.jpg");
+
+}
+
 .header {
   width: 100%;
   padding: 2%;
-  background-color: rgb(45, 204, 53);
-  color: black;
+  background-image: url("https://airwallpaper.com/wp-content/uploads/wall003/Abstract-Website-Backgrounds.jpg");
+  color: rgba(0, 255, 255, 0.89);
   text-align: center;
 }
 
@@ -16,4 +21,15 @@
 
 .mrgnttm10 {
   margin-bottom: 10px;
+}
+
+h2 {
+  color: rgba(0, 255, 255, 0.89);
+
+}
+
+/* ID color */
+th, td, label {
+  color: rgba(0, 255, 255, 0.89);
+
 }
