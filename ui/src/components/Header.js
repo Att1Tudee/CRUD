@@ -4,6 +4,7 @@ const Header = () => {
 
     return (
         <div className="header" id="headertext">
+            <br></br>
             <h1>
                 MOTD Bot control
             </h1>

@@ -15,7 +15,7 @@ body {
 
 }
 #headertext {
-  color: rgba(0, 255, 255, 0.89);
+  color: rgb(137, 224, 224);
 }
 /* END OF MOTD BOT TITLE */
 
@@ -34,7 +34,7 @@ body {
 /* Create MOTD and Database titles */
 
 h2 {
-  color: rgba(0, 255, 255, 0.89);
+  color: rgb(137, 224, 224);
   font-family: 'Shojumaru', 'Helvetica', sans-serif;
   opacity: 75%;
 
@@ -43,7 +43,7 @@ h2 {
 
 /* Labels aka Author and MOTD titles on saving area */
 label {
-  color: rgba(0, 255, 255, 0.89);
+  color: rgb(137, 224, 224);
   font-family: 'Fredericka the Great', 'Helvetica', sans-serif;
   opacity: 100%;
 
@@ -102,13 +102,13 @@ div.modal-content {
 }
 div.modal-title.h4 {
   font-family: 'Shojumaru', 'Helvetica', sans-serif;
-  color: rgba(0, 255, 255, 0.89);
+  color: rgb(137, 224, 224);
   opacity: 80%;
 
 }
 
 /* field backgrounds*/
-#task, #assignee, #status {
+#motd, #author, #status {
   background-image: url("https://airwallpaper.com/wp-content/uploads/wall003/Abstract-Website-Backgrounds.jpg");
   color: aliceblue;
 }

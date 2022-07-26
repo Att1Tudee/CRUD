@@ -1,43 +1,44 @@
 const { connect, disconnect } = require('../config/db.config');
-const { Task } = require('../model/task.model');
+const { Motd } = require('../model/motd.model');
 const logger = require('../logger/api.logger');
 
-class TaskRepository {
+class MotdRepository {
 
     constructor() {
         connect();
     }
 
-    async getTasks() {
-        const tasks = await Task.find({});
-        console.log('tasks:::', tasks);
-        return tasks;
+    async getMotds() {
+        const motds = await Motd.find({});
+        console.log('motds:::', motds);
+        return motds;
     }
 
-    async createTask(task) {
+    async createMotd(motd) {
         let data = {};
         try {
-            data = await Task.create(task);
+            data = await Motd.create(motd);
+
         } catch(err) {
             logger.error('Error::' + err);
         }
         return data;
     }
 
-    async updateTask(task) {
+    async updateMotd(motd) {
         let data = {};
         try {
-            data = await Task.updateOne(task);
+            data = await Motd.updateOne(motd);
         } catch(err) {
             logger.error('Error::' + err);
         }
         return data;
     }
 
-    async deleteTask(taskId) {
+    async deleteMotd(motdId) {
         let data = {};
         try {
-            data = await Task.deleteOne({_id : taskId});
+            data = await Motd.deleteOne({_id : motdId});
         } catch(err) {
             logger.error('Error::' + err);
         }
@@ -46,4 +47,4 @@ class TaskRepository {
 
 }
 
-module.exports = new TaskRepository();
+module.exports = new MotdRepository();

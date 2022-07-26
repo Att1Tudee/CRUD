@@ -10,7 +10,7 @@ if(process.env.ENVIRONMENT !== 'production') {
 }
 
 
-const taskController = require('./controller/task.controller')
+const motdController = require('./controller/motd.controller')
 
 
 
@@ -20,21 +20,21 @@ const port = process.env.PORT || 3080;
 app.use(express.static(path.join(__dirname, './ui/build')));
 app.use(bodyParser.json());
 
-app.get('/api/tasks', (req, res) => {
-    taskController.getTasks().then(data => res.json(data));
+app.get('/api/motds', (req, res) => {
+    motdController.getMotds().then(data => res.json(data));
 });
 
-app.post('/api/task', (req, res) => {
+app.post('/api/motd', (req, res) => {
     console.log(req.body);
-    taskController.createTask(req.body.task).then(data => res.json(data));
+    motdController.createMotd(req.body.motd).then(data => res.json(data));
 });
 
-app.put('/api/task', (req, res) => {
-    taskController.updateTask(req.body.task).then(data => res.json(data));
+app.put('/api/motd', (req, res) => {
+    motdController.updateMotd(req.body.motd).then(data => res.json(data));
 });
 
-app.delete('/api/task/:id', (req, res) => {
-    taskController.deleteTask(req.params.id).then(data => res.json(data));
+app.delete('/api/motd/:id', (req, res) => {
+    motdController.deleteMotd(req.params.id).then(data => res.json(data));
 });
 
 app.get('/', (req, res) => {

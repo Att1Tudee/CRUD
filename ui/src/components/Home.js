@@ -2,37 +2,38 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import Header from './Header'
-import { Tasks } from './Tasks'
-import CreateTask from './CreateTask'
-import { getAllTasks, deleteTask, fetchSettings } from '../services/TaskService'
+import { Motds } from './Motds'
+import CreateMotd from './CreateMotd'
+import { getAllMotds, deleteMotd, fetchSettings } from '../services/MotdService'
 
 function Home() {
 
-  const [tasks, setTasks] = useState([])
-  const [numberOfTasks, setNumberOfTasks] = useState([])
-  const [isTaskEdited, setTaskEdited] = useState(false)
+  const [motds, setMotds] = useState([])
+  const [numberOfMotds, setNumberOfMotds] = useState([])
+  const [isMotdEdited, setMotdEdited] = useState(false)
 
   useEffect(() => {
-    getAllTasks().then(tasks => {
-        console.log(tasks)
-        setTasks(tasks)
+    getAllMotds().then(motds => {
+        console.log(motds)
+        setMotds(motds)
       });
-  }, [numberOfTasks, isTaskEdited])
+  }, [numberOfMotds, isMotdEdited])
 
 
-  function delTask(taskId) {
-      deleteTask(taskId).then(response => {
+  function delMotd(motdId) {
+      deleteMotd(motdId).then(response => {
         console.log(response)
-        setNumberOfTasks(numberOfTasks - 1)
+        setNumberOfMotds(numberOfMotds - 1)
+
       });
   }
 
-  function taskCreated() {
-    setNumberOfTasks(numberOfTasks + 1)
+  function motdCreated() {
+    setNumberOfMotds(numberOfMotds + 1)
   }
 
-  function taskEdited(res) {
-     setTaskEdited(res)
+  function motdEdited(res) {
+     setMotdEdited(res)
   }
     
   return (
@@ -41,12 +42,12 @@ function Home() {
       <div className="container mrgnbtm">
         <div className="row">
           <div className="col-md-12">
-              <CreateTask taskCreated={taskCreated}></CreateTask>
+              <CreateMotd motdCreated={motdCreated}></CreateMotd>
           </div>
         </div>
       </div>
       <div className="container mrgnbtm">
-        <Tasks tasks={tasks} deleteTask={delTask} taskEdited={taskEdited}></Tasks>
+        <Motds motds={motds} deleteMotd={delMotd} motdEdited={motdEdited}></Motds>
      </div> 
   </div>
   );

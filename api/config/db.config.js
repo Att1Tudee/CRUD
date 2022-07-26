@@ -31,7 +31,7 @@ const disconnect = () => {
     mongoose.disconnect();
 
     mongoose.once("close", async () => {
-        console.log("Diconnected  to database");
+        console.log("Disconnected from database");
     });
 
 };

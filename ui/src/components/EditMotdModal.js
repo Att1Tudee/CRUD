@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useForm } from "react-hook-form";
-import { editTask } from '../services/TaskService'
+import { editMotd } from '../services/MotdService'
 
-export default function EditTaskModal({task, taskEdited}) {
+export default function EditMotdModal({motd, motdEdited}) {
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
@@ -12,8 +12,8 @@ export default function EditTaskModal({task, taskEdited}) {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-      editTask(data).then(response => {
-        taskEdited(response);
+      editMotd(data).then(response => {
+        motdEdited(response);
         setShow(false);
     });
     };
@@ -26,27 +26,31 @@ export default function EditTaskModal({task, taskEdited}) {
   
         <Modal show={show} size="lg" onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Task Edit</Modal.Title>
+            <Modal.Title>Motd Edit</Modal.Title>
           </Modal.Header>
           <Modal.Body>
           <form onSubmit={handleSubmit(onSubmit)}>
+
+{/*   No need for ID in edit modal
+           
             <div className="row">
                 <div className="form-group col-md-3">
-                  <label htmlFor="taskId">Id</label>
-                  <input {...register("id")} type="text" className="form-control" defaultValue={task.id} name="id" id="id" disabled placeholder="Can't modify" />
+                  <label htmlFor="motdId">Id</label>
+                  <input {...register("id")} type="text" className="form-control" defaultValue={motd.id} name="id" id="id" disabled placeholder="Can't modify" />
                 </div>
+                </div>
+*/}
 
-            </div>
             <div className="row">
                 <div className="form-group col-md-8">
-                    <label htmlFor="task">Author</label>
-                    <input {...register("task")} type="text" className="form-control" defaultValue={task.task} name="task" id="task" placeholder="Insert author here" />
+                    <label htmlFor="motd">MOTD</label>
+                    <input {...register("motd")} type="text" className="form-control" defaultValue={motd.motd} name="motd" id="motd" placeholder="Insert author here" />
                 </div>
             </div>
             <div className="row">
                 <div className="form-group col-md-8">
-                    <label htmlFor="assignee">MOTD</label>
-                    <input {...register("assignee")} type="text" className="form-control" defaultValue={task.assignee} name="assignee" id="assignee" placeholder="Message of the day" />
+                    <label htmlFor="author">Author</label>
+                    <input {...register("author")} type="text" className="form-control" defaultValue={motd.author} name="author" id="author" placeholder="Message of the day" />
                 </div>
             </div>
 {/*
@@ -57,7 +61,7 @@ THIS IS OPTIONAL STATUS
             <div className="row">
                 <div className="form-group col-md-3">
                     <label htmlFor="status">Status:</label>
-                    <select {...register("status")} name="status" defaultValue={task.status} className="form-control" id="status">
+                    <select {...register("status")} name="status" defaultValue={motd.status} className="form-control" id="status">
                         <option>To Be Done</option>
                         <option>In Progress</option>
                         <option>Completed</option>
