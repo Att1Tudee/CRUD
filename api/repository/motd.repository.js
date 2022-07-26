@@ -18,7 +18,6 @@ class MotdRepository {
         let data = {};
         try {
             data = await Motd.create(motd);
-
         } catch(err) {
             logger.error('Error::' + err);
         }

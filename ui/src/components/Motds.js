@@ -4,6 +4,8 @@ import EditMotdModal from './EditMotdModal'
 export const Motds = ({motds, deleteMotd, motdEdited}) => {
 
     console.log('motds length is:', motds)
+    console.log('fucksake')
+
     if (motds.length === 0) return null
 
     const MotdRow = (motd,index) => {
