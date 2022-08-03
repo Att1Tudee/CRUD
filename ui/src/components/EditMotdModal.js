@@ -44,13 +44,13 @@ export default function EditMotdModal({motd, motdEdited}) {
             <div className="row">
                 <div className="form-group col-md-8">
                     <label htmlFor="motd">MOTD</label>
-                    <input {...register("motd")} type="text" className="form-control" defaultValue={motd.motd} name="motd" id="motd" placeholder="Insert author here" />
+                    <input {...register("motd")} type="text" className="form-control" defaultValue={motd.motd} name="motd" id="motd" placeholder="Message of the day" />
                 </div>
             </div>
             <div className="row">
                 <div className="form-group col-md-8">
                     <label htmlFor="author">Author</label>
-                    <input {...register("author")} type="text" className="form-control" defaultValue={motd.author} name="author" id="author" placeholder="Message of the day" />
+                    <input {...register("author")} type="text" className="form-control" defaultValue={motd.author} name="author" id="author" placeholder="Insert author here" />
                 </div>
             </div>
 {/*
