@@ -48,8 +48,13 @@ label {
   opacity: 100%;
 
 }
+/* welcome text */
+#welcometext {
+  font-family: 'Averia Sans Libre', 'Helvetica', sans-serif;
+  color: rgba(0, 255, 255, 0.89);
+  opacity: 85%;
 
-
+}
 /* MOTD ID, AUTHOR and MOTD text in database box */
 th {
   font-family: 'Shojumaru', 'Helvetica', sans-serif;
