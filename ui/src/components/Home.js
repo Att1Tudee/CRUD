@@ -14,7 +14,6 @@ function Home() {
 
   useEffect(() => {
     getAllMotds().then(motds => {
-        console.log(motds)
         setMotds(motds)
       });
   }, [numberOfMotds, isMotdEdited])

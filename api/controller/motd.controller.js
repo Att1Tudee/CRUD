@@ -15,6 +15,7 @@ class TodoController {
 
     async updateMotd(motd) {
         logger.info('Controller: updateMotd', motd);
+        console.log(motd)
         return await motdService.updateMotd(motd);
     }
 

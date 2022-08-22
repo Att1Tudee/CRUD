@@ -15,6 +15,7 @@ export default function EditMotdModal({motd, motdEdited}) {
         setShow(false);
     });
     };
+    console.log(handleSubmit)
   
     return (
       <>
@@ -29,7 +30,6 @@ export default function EditMotdModal({motd, motdEdited}) {
           <Modal.Body>
           <form onSubmit={handleSubmit(onSubmit)}>
 
-{/*   No need for ID in edit modal
            
             <div className="row">
                 <div className="form-group col-md-3">
@@ -37,7 +37,7 @@ export default function EditMotdModal({motd, motdEdited}) {
                   <input {...register("id")} type="text" className="form-control" defaultValue={motd.id} name="id" id="id" disabled placeholder="Can't modify" />
                 </div>
                 </div>
-*/}
+
 
             <div className="row">
                 <div className="form-group col-md-8">
