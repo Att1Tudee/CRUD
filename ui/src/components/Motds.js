@@ -4,7 +4,7 @@ import EditMotdModal from './EditMotdModal'
 export const Motds = ({motds, deleteMotd, motdEdited}) => {
 
     console.log('motds length is:', motds)
-
+    console.log(motdEdited)
     if (motds.length === 0) return null
 
     const MotdRow = (motd,index) => {

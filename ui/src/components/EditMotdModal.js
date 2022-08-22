@@ -6,10 +6,8 @@ import { editMotd } from '../services/MotdService'
 
 export default function EditMotdModal({motd, motdEdited}) {
     const [show, setShow] = useState(false);
-  
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
       editMotd(data).then(response => {

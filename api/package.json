@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbachi/nodejs-restapi-mongo.git"
+    "url": "git+https://github.com/Att1Tudee/CRUD"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bbachi/nodejs-restapi-mongo/issues"
+    "url": "https://github.com/Att1Tudee/CRUD"
   },
-  "homepage": "https://github.com/bbachi/nodejs-restapi-mongo#readme",
+  "homepage": "https://github.com/Att1Tudee/CRUD",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
